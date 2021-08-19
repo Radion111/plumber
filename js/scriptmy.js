@@ -1,4 +1,31 @@
-// для медленого скрола
+
+const swiper = new Swiper('.myslider', {
+
+
+   scrollbar: {
+      el:'.swiper-scrollbar',
+      draggable: true
+      },
+    navigation: {
+     nextEl: '.buttonnext',
+     prevEl: '.buttonprev',
+   },
+ loop:true,
+
+
+slidesPerView: 2,
+
+breakpoints: {
+   "320": {
+   slidesPerView:1,
+   },
+   "688": {
+   slidesPerView:2, 
+   },
+},
+ });
+
+
 
  $(document).ready(function () {
 
@@ -25,11 +52,12 @@ $(document).ready(function() {
  
    });
    $('.header-top__maina').click(function(event) {
-      $('.burger-menu, .header-top__nav').toggleClass('active');
+      $('.burger-menu, .header-top__nav').deleteClass('active');
    });
    });
 
-   
+
+
 
 function ibg(){
 

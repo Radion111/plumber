@@ -159,7 +159,7 @@ body {
   margin: 0 auto;
   max-width: 1050px;
   height: 100%;
-  padding: 0px 15px;
+  padding: 0px 25px;
 }
 
 .container__modification {
@@ -169,8 +169,21 @@ body {
   padding: 0px 15px;
 }
 
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: normal;
+  color: black;
+}
+
+.title2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: normal;
+  color: black;
+}
+
 .header {
-  height: 100%;
   width: 100%;
 }
 
@@ -263,7 +276,7 @@ body {
 }
 
 .header-center {
-  background: url("../img/image/header-center.jpg") 100% 100% no-repeat;
+  background: url("../img/image/header-center.jpg") 100% 100%/cover no-repeat;
 }
 
 .header-center__body {
@@ -310,25 +323,23 @@ body {
 
 .benefit {
   background-color: #ffffff;
-  height: 100%;
-  position: relative;
-  top: 0px;
+  width: 100%;
 }
 
 .benefit__body {
-  padding: 50px 0px 60px 0px;
+  padding: 53px 0px;
 }
 
 .benefit__row {
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0px -20px;
 }
 
 .benefit__column {
-  margin-right: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+  padding: 0px 20px 0px 20px;
 }
 
 .benefit__column:last-child {
@@ -337,88 +348,457 @@ body {
 
 .benefit__img {
   margin-bottom: 55px;
+  width: 154px;
+  height: 154px;
 }
 
 .benefit__text {
-  max-width: 160px;
+  max-width: 170px;
   text-align: center;
   font-size: 24px;
   line-height: normal;
 }
 
-.services {
+.service {
   width: 100%;
   height: 100%;
   background-color: #fafafa;
-  position: relative;
 }
 
-.services__body {
+.service__body {
   padding: 80px 0px 120px 0px;
 }
 
-.callback {
+.service__h2 {
+  text-align: center;
+}
+
+.service__toptext {
+  text-align: center;
+  margin: 35px 0px 55px 0px;
+  font-size: 33px;
+  font-weight: 500;
+}
+
+.service__h3 {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.service__row {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0px -30px;
+  flex-wrap: wrap;
+}
+
+.service__column {
+  width: 100%;
+  padding: 0px 30px;
+  flex: 0 1 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.service__maintext {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  max-width: 220px;
+  flex: 1 1 auto;
+}
+
+.service__foto {
+  margin: 30px 0px 30px 0px;
+  display: block;
+  color: #e9be00;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.service__foto:hover {
+  text-decoration: underline;
+}
+
+.service__button {
+  font-size: 18px;
+  display: block;
+  font-weight: 500;
+  padding: 20px 17px;
+  border: 2.5px solid #e9be00;
+  color: black;
+  width: 200px;
+}
+
+.service__button:hover {
+  background-color: #e9be00;
+  transition: all 0.3s linear;
+  color: white;
+}
+
+.service__mainrow {
+  display: flex;
+  justify-content: center;
+}
+
+.service__h3ab {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+
+.service__rowrow {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.service__mainimg {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 220px;
+  height: 380px;
+}
+
+.service__mainimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.first {
+  margin-top: 100px;
+  margin-bottom: 125px;
+}
+
+.callme {
+  width: 100%;
+  height: 100%;
   background: url("../img/image/callback.png") no-repeat;
 }
 
-.callback__body {
-  padding: 170px 0px 190px 0px;
+.callme__body {
+  padding: 170px 0px 195px 0px;
+}
+
+.callme__text {
+  color: #252122;
+  font-size: 46px;
+  font-weight: 800;
+  max-width: 1000px;
+  text-align: center;
+  margin-bottom: 105px;
+  line-height: normal;
+}
+
+.callme__numbers {
+  display: block;
+  color: #e9be00;
+  font-size: 46px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 35px;
 }
 
 .planwork {
   background-color: #ffffff;
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 .planwork__body {
-  padding: 90px 0px 80px 0px;
+  padding: 95px 0px 75px 0px;
+}
+
+.planwork__h2 {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.planwork__block {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+}
+
+.planwork__img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.planwork__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.planwork__h3 {
+  position: absolute;
+  top: 17%;
+  left: 0px;
+  font-size: 40px;
+  font-weight: 600;
+  max-width: 300px;
+  text-align: center;
+}
+
+.planwork__count {
+  text-align: center;
+  max-width: 150px;
+  position: absolute;
+  z-index: 2;
+}
+
+.planwork__count span {
+  color: #eecc58;
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.planwork__count div {
+  color: #7a7877;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.first {
+  top: 12%;
+  right: 47%;
+}
+
+.second {
+  top: 36%;
+  right: 19%;
+}
+
+.third {
+  right: 3%;
+  top: 62%;
+}
+
+.four {
+  right: 20%;
+  top: 89%;
+}
+
+.five {
+  top: 100%;
+  right: 47%;
+}
+
+.six {
+  top: 89%;
+  left: 12%;
+}
+
+.seven {
+  top: 61%;
+  left: 3%;
 }
 
 .comments {
+  background-color: #fafafa;
   width: 100%;
   height: 100%;
-  background-color: #fafafa;
-  position: relative;
 }
 
 .comments__body {
-  padding: 90px 0px 80px 0px;
+  padding: 95px 0px 75px 0px;
+  position: relative;
+  top: 0px;
 }
 
-.mycontacks {
+.comments__h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.comments__aaa {
+  margin: 70px auto 0px auto;
+  display: block;
+}
+
+.slidder__body {
+  padding-bottom: 90px;
+}
+
+.slidder__text {
+  font-size: 20px;
+  max-width: 420px;
+  color: #7a7877;
+  margin: 0px auto 40px auto;
+  align-items: justify;
+  line-height: normal;
+}
+
+.slidder__name {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.slidder__city {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+}
+
+.buttonwe {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 20px 40px;
+  color: #000000;
+  background-color: #e9be00;
+  max-width: 225px;
+}
+
+.buttonwe:hover {
+  color: white;
+  transition: all 0.1s linear;
+}
+
+.callback {
+  height: 100%;
+  width: 100%;
   background-color: #ffffff;
+}
+
+.callback__body {
+  padding: 150px 0px 0px 0px;
+}
+
+.callback__h2 {
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+.callback__row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.callback__column {
+  flex: 0 1 50%;
+}
+
+.callback__column:first-child {
+  margin-right: 65px;
+}
+
+.callback__h3 {
+  font-size: 28px;
+  color: #000000;
+  font-weight: bold;
+  max-width: 540px;
+  line-height: normal;
+}
+
+.callback__maintex {
+  color: #7a7877;
+  font-size: 19.5px;
+  color: #000000;
+  font-weight: normal;
+  line-height: normal;
+  margin: 35px 0px;
+  max-width: 540px;
+}
+
+.callback__img {
+  flex: 1 1 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.callback__img img {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
-.mycontacks__body {
-  padding: 140px 0px;
+.callback__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.callback__input {
+  height: 65px;
+  display: block;
+  padding: 15px 0px 15px 45px;
+  background-color: #f9f9f9;
+  font-size: 18px;
+}
+
+.callback__input:nth-child(2) {
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+.callback__textarea {
+  width: 500px;
+  height: 200px;
+  display: block;
+  margin-bottom: 60px;
+  font-size: 18px;
+  padding: 15px 0px 0px 45px;
+  background-color: #f9f9f9;
+}
+
+.swiper-scrollbar {
+  bottom: -200px;
+}
+
+.buttonprev {
+  position: absolute;
+  top: 30%;
+  left: -70px;
+  width: 40px;
+  height: 50px;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 10;
+}
+
+.buttonnext {
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  right: -70px;
+  width: 40px;
+  height: 50px;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .footer {
   background-color: #2b2b2b;
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
 .footer__body {
-  padding: 110px 0px 90px 0px;
+  padding: 110px 0px 95px 0px;
 }
 
-.footer__maintex {
+.footer__maintext {
   color: white;
-  margin: 0 auto;
   font-size: 30px;
-  font-weight: 600;
-  line-height: normal;
-  max-width: 240px;
+  font-weight: 700;
+  max-width: 250px;
+  margin: 0 auto;
 }
 
 .ibg {
@@ -436,6 +816,22 @@ body {
   left: 0;
   opacity: 0;
   visibility: hidden;
+}
+
+@media (max-width: 1369px) {
+  .callback__body {
+    padding: 70px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 1157px) {
+  .buttonprev {
+    left: -20px;
+  }
+
+  .buttonnext {
+    right: -20px;
+  }
 }
 
 @media (max-width: 1113px) {
@@ -459,6 +855,76 @@ body {
   }
 }
 
+@media (max-width: 1054px) {
+  .planwork__body {
+    padding: 95px 0px 125px 0px;
+  }
+
+  .planwork__block {
+    margin: 0px auto;
+    width: 600px;
+    height: 600px;
+  }
+
+  .planwork__img {
+    margin: 0px auto;
+    width: 600px;
+    height: 600px;
+  }
+
+  .planwork__h3 {
+    top: 100px;
+    left: -40px;
+    font-size: 26px;
+  }
+
+  .planwork__count div {
+    font-size: 24px;
+  }
+
+  .first {
+    top: 90px;
+    left: 250px;
+  }
+
+  .second {
+    top: 210px;
+    right: 80px;
+  }
+
+  .third {
+    top: 365px;
+    right: 5px;
+  }
+
+  .four {
+    top: 530px;
+    right: 110px;
+  }
+
+  .five {
+    top: 600px;
+    left: 250px;
+  }
+
+  .six {
+    top: 530px;
+    right: 440px;
+  }
+
+  .seven {
+    top: 360px;
+    left: 5px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .first {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 1000px) {
   .header-top__nav {
     align-items: center;
@@ -478,9 +944,47 @@ body {
   }
 }
 
+@media (max-width: 978px) {
+  .slidder__text {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 952px) {
+  .comments__h2 {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 903px) {
+  .callback__column:first-child {
+    margin-right: 30px;
+  }
+
+  .callback__textarea {
+    margin-bottom: 33px;
+  }
+}
+
+@media (max-width: 877px) {
+  .comments__body {
+    padding: 55px 0px 25px 0px;
+  }
+}
+
 @media (max-width: 842px) {
   .header-top__telephon span {
     display: none;
+  }
+}
+
+@media (max-width: 811px) {
+  .callback__input {
+    width: 360px;
+  }
+
+  .callback__textarea {
+    width: 360px;
   }
 }
 
@@ -491,6 +995,33 @@ body {
 
   .header-top__bigtest {
     font-size: 17px;
+  }
+}
+
+@media (max-width: 790px) {
+  .service__mainrow {
+    flex-direction: column;
+  }
+
+  .service__h3ab {
+    margin-top: 20px;
+    margin-left: 0px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .service__rowrow {
+    justify-content: center;
+  }
+
+  .service__mainimg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px) {
+  .service__row {
+    justify-content: center;
   }
 }
 
@@ -599,6 +1130,63 @@ body {
   }
 }
 
+@media (max-width: 728px) {
+  .callme__body {
+    padding: 90px 0px 100px 0px;
+  }
+
+  .callme__text {
+    font-size: 32px;
+  }
+
+  .callme__numbers {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 688px) {
+  .slidder__text {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 670px) {
+  .callback__h2 {
+    margin-bottom: 40px;
+  }
+
+  .callback__row {
+    flex-direction: column;
+  }
+
+  .callback__column:first-child {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .callback__h3 {
+    margin: 35px auto;
+    text-align: center;
+  }
+
+  .callback__maintex {
+    margin: 35px auto;
+    text-align: center;
+  }
+
+  .callback__input {
+    width: 100%;
+  }
+
+  .callback__textarea {
+    width: 100%;
+  }
+
+  .callback__button {
+    margin: 0px auto;
+  }
+}
+
 @media (max-width: 620px) {
   .header-top {
     height: 145px;
@@ -614,18 +1202,118 @@ body {
     margin-right: 0px;
     margin-bottom: 15px;
   }
-}
 
-@media (max-width: 592px) {
-  .footer__body {
-    padding: 60px 0px 50px 0px;
+  .planwork__body {
+    padding: 50px 0px 70px 0px;
+  }
+
+  .planwork__block {
+    margin: 0px auto;
+    width: 340px;
+    height: 340px;
+  }
+
+  .planwork__img {
+    margin: 0px auto;
+    width: 340px;
+    height: 340px;
+  }
+
+  .planwork__h3 {
+    top: 50px;
+    left: -40px;
+    font-size: 21px;
+    max-width: 200px;
+  }
+
+  .planwork__count span {
+    font-size: 22px;
+  }
+
+  .planwork__count div {
+    font-size: 16px;
+  }
+
+  .first {
+    top: 30px;
+    left: 140px;
+  }
+
+  .second {
+    top: 120px;
+    left: 240px;
+  }
+
+  .third {
+    top: 210px;
+    left: 280px;
+  }
+
+  .four {
+    top: 300px;
+    left: 237px;
+  }
+
+  .five {
+    top: 340px;
+    left: 140px;
+  }
+
+  .six {
+    top: 300px;
+    right: 247px;
+  }
+
+  .seven {
+    top: 205px;
+    right: 280px;
   }
 }
 
-@media (max-width: 505px) {
-  .footer__maintex {
-    font-size: 23px;
+@media (max-width: 521px) {
+  .slidder__text {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 510px) {
+  .title2 {
+    font-size: 30px;
+  }
+
+  .service__body {
+    padding: 50px 0px 70px 0px;
+  }
+
+  .service__toptext {
+    font-size: 24px;
+    margin: 25px 0px 30px 0px;
+  }
+
+  .service__row {
+    align-items: center;
+  }
+
+  .service__column {
+    flex: 0 1 100%;
+  }
+
+  .service__img {
+    margin: 0px auto;
+  }
+
+  .service__maintext {
+    max-width: 300px;
+    margin: 25px auto 0px auto;
     text-align: center;
+  }
+
+  .service__foto {
+    text-align: center;
+  }
+
+  .service__button {
+    margin: 0px auto;
   }
 }
 
@@ -641,5 +1329,63 @@ body {
   .header-center__h2 {
     color: #252122;
     line-height: normal;
+  }
+}
+
+@media (max-width: 450px) {
+  .callme__body {
+    padding: 50px 0px 60px 0px;
+  }
+
+  .callme__text {
+    font-size: 25px;
+  }
+
+  .callme__numbers {
+    font-size: 23px;
+  }
+
+  .callback__h2 {
+    font-size: 35px;
+  }
+
+  .callback__h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 415px) {
+  .benefit__column {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 391px) {
+  .slidder__text {
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 370px) {
+  .planwork__block {
+    margin: 0px auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .planwork__img {
+    margin: 0px auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .planwork__h3 {
+    top: 50px;
+    left: -40px;
+    font-size: 18px;
+  }
+
+  .planwork__count {
+    display: none;
   }
 }
