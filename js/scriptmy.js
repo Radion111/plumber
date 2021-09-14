@@ -51,12 +51,15 @@ $(document).ready(function() {
       $('body').toggleClass('lock');
  
    });
-   $('.header-top__maina').click(function(event) {
-      $('.burger-menu, .header-top__nav').deleteClass('active');
-   });
+ 
    });
 
-
+   $(document).ready(function () {
+      $(".header-top__maina").click(function (e) { 
+        e.preventDefault();
+        $(".burger-menu, .header-top__nav").removeClass("active");
+      });
+    }); 
 
 
 function ibg(){
