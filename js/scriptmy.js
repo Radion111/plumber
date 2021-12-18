@@ -1,76 +1,71 @@
+const swiper = new Swiper(".myslider", {
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  navigation: {
+    nextEl: ".buttonnext",
+    prevEl: ".buttonprev",
+  },
+  loop: true,
 
-const swiper = new Swiper('.myslider', {
+  slidesPerView: 2,
 
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    688: {
+      slidesPerView: 2,
+    },
+  },
+});
 
-   scrollbar: {
-      el:'.swiper-scrollbar',
-      draggable: true
+// ! Напишу поже на native JavaScript
+$(document).ready(function () {
+  $(".header-top__maina").click(function (e) {
+    e.preventDefault();
+    $("html,body").animate(
+      {
+        scrollTop: $($(this).attr("href")).offset().top + "px",
       },
-    navigation: {
-     nextEl: '.buttonnext',
-     prevEl: '.buttonprev',
-   },
- loop:true,
-
-
-slidesPerView: 2,
-
-breakpoints: {
-   "320": {
-   slidesPerView:1,
-   },
-   "688": {
-   slidesPerView:2, 
-   },
-},
- });
-
-
-
- $(document).ready(function () {
-
-   $(".header-top__maina").click(function (e) { 
-     e.preventDefault();
-     $("html,body").animate({
-      scrollTop: $($(this).attr("href")).offset().top+"px"
-     }, {
-       duration:1000,
-       easing:"linear",
-     });
-     return false;
-   });
- });
-
-
-
+      {
+        duration: 1000,
+        easing: "linear",
+      }
+    );
+    return false;
+  });
+});
 
 // burger menu
-$(document).ready(function() {
-   $('.burger-menu').click(function(event) {
-      $('.burger-menu,.header-top__nav').toggleClass('active');
-      $('body').toggleClass('lock');
- 
-   });
- 
-   });
 
-   $(document).ready(function () {
-      $(".header-top__maina").click(function (e) { 
-        e.preventDefault();
-        $(".burger-menu, .header-top__nav").removeClass("active");
-      });
-    }); 
+let burgermenu = document.querySelector(".burger-menu");
+burgermenu.addEventListener("click", (event) => {
+  event.preventDefault();
+  burgermenu.classList.toggle("active");
+  document.querySelector(".header-top__nav").classList.toggle("active");
+  document.getElementsByTagName("body")[0].classList.toggle("lock");
+});
 
+let headertop = document.querySelectorAll(".header-top__maina");
+headertop.forEach((item) => {
+  item.addEventListener("click", function headerTop(event) {
+    event.preventDefault();
+    burgermenu.classList.remove("active");
+    document.querySelector(".header-top__nav").classList.remove("active");
+  });
+});
 
-function ibg(){
+// Метод ibg для картинок
+function ibg() {
+  let ibg = document.querySelectorAll(".ibg");
+  for (var i = 0; i < ibg.length; i++) {
+    if (ibg[i].querySelector("img")) {
+      ibg[i].style.backgroundImage =
+        "url(" + ibg[i].querySelector("img").getAttribute("src") + ")";
+    }
+  }
+}
 
-   $.each($('.ibg'), function(index, val) {
-   if($(this).find('img').length>0){
-   $(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
-   }
-   });
-   }
-   
-   ibg();
-
-   
+ibg();
