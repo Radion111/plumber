@@ -21,23 +21,6 @@ const swiper = new Swiper(".myslider", {
   },
 });
 
-// ! Напишу поже на native JavaScript
-$(document).ready(function () {
-  $(".header-top__maina").click(function (e) {
-    e.preventDefault();
-    $("html,body").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top + "px",
-      },
-      {
-        duration: 1000,
-        easing: "linear",
-      }
-    );
-    return false;
-  });
-});
-
 // burger menu
 
 let burgermenu = document.querySelector(".burger-menu");
@@ -69,3 +52,18 @@ function ibg() {
 }
 
 ibg();
+
+
+let scroll = document.querySelectorAll(".header-top__maina");
+
+scroll.forEach((item) => {
+  item.addEventListener("click", function Scrolleasyss(event) {
+    event.preventDefault();
+    let id = event.target.getAttribute("href");
+
+    document.querySelector(id).scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
+  });
+});
