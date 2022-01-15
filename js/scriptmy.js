@@ -53,10 +53,23 @@ function ibg() {
 
 ibg();
 
-
 let scroll = document.querySelectorAll(".header-top__maina");
 
 scroll.forEach((item) => {
+  item.addEventListener("click", function Scrolleasyss(event) {
+    event.preventDefault();
+    let id = event.target.getAttribute("href");
+
+    document.querySelector(id).scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
+  });
+});
+
+let linkaa = document.querySelectorAll(".service__button");
+
+linkaa.forEach((item) => {
   item.addEventListener("click", function Scrolleasyss(event) {
     event.preventDefault();
     let id = event.target.getAttribute("href");
