@@ -624,11 +624,16 @@
                         </div>
                      </div>
                      <div class="callback__column">
-                        <form method="POST" class="callback__form">
-                           <input class="callback__input" type="text" placeholder="Имя*" name="name">
-                           <input class="callback__input" type="tel" placeholder="Номер*" name="number">
-                           <p><textarea class="callback__textarea" placeholder="Коменнтарий"></textarea></p>
-                           <button class="callback__button buttonwe">Отправить</button>
+                        <form method="get" class="callback__form">
+                           <input class="callback__input name-input" type="text" placeholder="Имя*" name="name">
+                           <div class="error">Ведите корекное имя на кирилице</div>
+                           <input class="callback__input number-input" type="tel" maxlength=12 value="380"
+                              placeholder="Номер*" name="number">
+                           <div class="error">Ведите корекний телефон</div>
+                           <textarea class="callback__textarea textare-input" placeholder="Коменнтарий"></textarea>
+
+                           <div class="error">Коментарий должен быть больше 10 символов</div>
+                           <button class="callback__button buttonwe" type="submit">Отправить</button>
                         </form>
                      </div>
 

@@ -80,3 +80,66 @@ linkaa.forEach((item) => {
     });
   });
 });
+
+let linkAA = document.querySelector(".header-center__aa");
+
+linkAA.addEventListener("click", function Scrolleasyss(event) {
+  event.preventDefault();
+  let id = event.target.getAttribute("href");
+
+  document.querySelector(id).scrollIntoView({
+    block: "center",
+    behavior: "smooth",
+  });
+});
+// Для форми проверка
+
+let registration = document.querySelector(".callback__button");
+
+// let str = "аааааА23";
+// console.log(/(?=.*[0-9])(?=.*[а-я])(?=.*[А-Я])[0-9а-яА-Я]{6,16}/g.test(str));
+// !интересная конструкция нужно изучить ))) ?=
+
+registration.addEventListener("click", function Check(event) {
+  let name = document.querySelector(".name-input");
+  let textarea = document.querySelector(".callback__textarea");
+  let tel = document.querySelector(".number-input");
+
+  // Для имени
+  if (name.value.length < 3) {
+    event.preventDefault();
+    name.classList.add("active");
+    name.nextElementSibling.classList.add("active");
+  } else if (name.value.length >= 3) {
+    name.classList.remove("active");
+    name.nextElementSibling.classList.remove("active");
+  }
+  // Для textarea
+  if (textarea.value.length < 10) {
+    event.preventDefault();
+    textarea.classList.add("active");
+    textarea.nextElementSibling.classList.add("active");
+  } else if (textarea.value.length >= 10) {
+    textarea.classList.remove("active");
+    textarea.nextElementSibling.classList.remove("active");
+  }
+  // Для телефона
+  // Запрос re для
+
+  if (tel.value.search(/[a-z]/g) != -1 || tel.value.search(/[а-я]/g) != -1) {
+    event.preventDefault();
+    tel.classList.add("active");
+    tel.nextElementSibling.nextElementSibling.classList.add("active");
+  } else if (tel.value.length != 12) {
+    event.preventDefault();
+    tel.classList.add("active");
+    tel.nextElementSibling.classList.add("active");
+  } else if (
+    tel.value.length == 12 &&
+    (tel.value.search(/[a-z]/g) == -1 || tel.value.search(/[а-я]/g != -1))
+  ) {
+    tel.classList.remove("active");
+    tel.nextElementSibling.classList.remove("active");
+    tel.nextElementSibling.classList.remove("active");
+  }
+});
